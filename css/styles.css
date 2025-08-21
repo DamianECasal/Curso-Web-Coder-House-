@@ -1,0 +1,225 @@
+:root {
+  /* Paleta de colores */
+  --color-primary: #e74c3c; /* Rojo/Naranja */
+  --color-secondary: #1a1a1a; /* Negro */
+  --color-dark: #222; /* Gris Oscuro */
+  --color-light: #f5f5f5; /* Gris Claro */
+  --color-white: #fff; /* Blanco */
+  --color-gray: #ccc; /* Gris medio */
+  
+  /* Fuentes */
+  --font-press-start: 'Press Start 2P', cursive;
+  --font-sans-serif: sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans-serif);
+  background-color: var(--color-light);
+  color: #333;
+}
+
+/* 2. ESTILOS DEL ENCABEZADO Y NAVEGACIÓN */
+header {
+  background-color: var(--color-secondary);
+  padding: 15px;
+  color: var(--color-white);
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.logo h1 {
+  font-size: 1.2rem;
+  font-family: var(--font-press-start);
+  color: var(--color-primary);
+}
+
+nav .nav-link {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px; /* Bordes redondeados para los enlaces */
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease; /* Transición suave en el hover */
+}
+
+nav .nav-link:hover {
+  background-color: #c0392b; /* Tono más oscuro al pasar el mouse */
+}
+
+/* 3. ESTILOS DE PÁGINA Y CONTENEDORES */
+h1, h2, h3, h4 {
+  font-family: var(--font-press-start);
+  color: var(--color-secondary);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+}
+
+.hero {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 40px 20px;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px 24px;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #c0392b;
+  color: var(--color-white);
+}
+
+.destacados,
+section {
+  padding: 20px;
+  background-color: var(--color-white);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.destacados h3,
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* 4. ESTILOS DE COMPONENTES (CARDS, TABLAS, FORMULARIOS) */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: var(--color-primary);
+}
+
+.card-text {
+  font-size: 0.85rem;
+  margin: 5px 10px;
+  text-align: left;
+}
+
+/* Estilos para tablas */
+.table thead {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.table th {
+  font-size: 0.9rem;
+}
+
+/* Estilos para formularios */
+form {
+  max-width: 450px;
+  margin: 20px auto;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+}
+
+/* 5. ESTILOS DEL PIE DE PÁGINA */
+.footer-anime {
+  background-color: var(--color-secondary);
+  border-top: 3px solid var(--color-primary);
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.footer-box h4 {
+  margin-bottom: 10px;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  font-family: var(--font-press-start);
+}
+
+.footer-box a img {
+  width: 24px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.footer-box p {
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  margin-bottom: 5px;
+}
+
+.footer-box form input[type="email"] {
+  border: 1px solid #555;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+.footer-box button {
+  padding: 5px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-box button:hover {
+  background-color: #c0392b;
+}
