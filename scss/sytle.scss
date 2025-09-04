@@ -1,0 +1,245 @@
+/* VARIABLES */
+$color-primary: #e74c3c;
+$color-secondary: #1a1a1a;
+$color-dark: #222;
+$color-light: #f5f5f5;
+$color-white: #fff;
+$color-gray: #ccc;
+
+$font-press-start: 'Press Start 2P', cursive;
+$font-sans-serif: sans-serif;
+
+/* MIXINS */
+@mixin animation-effect($property, $duration, $delay: 0s) {
+  transition: #{$property} #{$duration} ease-in-out;
+  &:hover {
+    transform: scale(1.05) translateY(-5px);
+  }
+}
+
+/* ESTILOS GLOBALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-sans-serif;
+  background-color: $color-light;
+  color: #333;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+header {
+  background-color: $color-secondary;
+  padding: 15px;
+  color: $color-white;
+  border-bottom: 3px solid $color-primary;
+}
+
+.logo h1 {
+  font-size: 1.2rem;
+  font-family: $font-press-start;
+  color: $color-primary;
+}
+
+nav .nav-link {
+  background-color: $color-primary;
+  color: $color-white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    transform: scale(1.1);
+  }
+}
+
+/* PÁGINA Y CONTENEDORES */
+h1, h2, h3, h4 {
+  font-family: $font-press-start;
+  color: $color-secondary;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: $color-secondary;
+}
+
+.hero {
+  background-color: $color-dark;
+  color: $color-white;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  @include animation-effect(transform, 0.4s);
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: $color-primary;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+}
+
+.destacados,
+section {
+  padding: 20px;
+  background-color: $color-white;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.destacados h3,
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* COMPONENTES */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid $color-primary;
+}
+
+.card {
+  @include animation-effect(transform, 0.4s);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: $color-primary;
+}
+
+.card-text {
+  font-size: 0.85rem;
+  margin: 5px 10px;
+  text-align: left;
+}
+
+/* Estilos para tablas */
+.table thead {
+  background-color: $color-primary;
+  color: $color-white;
+  
+  th {
+    font-size: 0.9rem;
+  }
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+/* Estilos para formularios */
+form {
+  max-width: 450px;
+  margin: 20px auto;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  color: $color-white;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+}
+
+/* PIE DE PÁGINA */
+.footer-anime {
+  background-color: $color-secondary;
+  border-top: 3px solid $color-primary;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.footer-box {
+  h4 {
+    margin-bottom: 10px;
+    color: $color-primary;
+    font-size: 0.95rem;
+    font-family: $font-press-start;
+  }
+  
+  a img {
+    width: 24px;
+    margin-right: 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  
+  p {
+    font-size: 0.8rem;
+    color: $color-gray;
+    margin-bottom: 5px;
+  }
+  
+  form {
+    input[type="email"] {
+      border: 1px solid #555;
+      background-color: #333;
+      color: $color-white;
+      font-size: 0.8rem;
+      border-radius: 5px;
+    }
+    
+    button {
+      padding: 5px;
+      background-color: $color-primary;
+      color: $color-white;
+      border: none;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: darken($color-primary, 10%);
+      }
+    }
+  }
+}
